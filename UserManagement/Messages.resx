@@ -144,6 +144,9 @@
   <data name="FirstNamePlaceholderValue" xml:space="preserve">
     <value>Enter First Name...</value>
   </data>
+  <data name="GenericExceptionMessage" xml:space="preserve">
+    <value>Some error occured. Please try again after sometime. Error has been reported to Administrator.</value>
+  </data>
   <data name="InvalidCountry" xml:space="preserve">
     <value>Invalid Country</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="NoSpecialChactersAndSymbols" xml:space="preserve">
     <value>Special Characters and Symbols are not allowed</value>
+  </data>
+  <data name="NoUsersFoundWithFirstNameLastName" xml:space="preserve">
+    <value>No users found in system with following First Name "{0}" and Last Name "{1}"</value>
   </data>
   <data name="RecordSavedSuccessfully" xml:space="preserve">
     <value>Record Saved successfully</value>

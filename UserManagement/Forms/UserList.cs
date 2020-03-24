@@ -23,7 +23,7 @@ namespace UserManagement.Forms
     {
         IDataLogic dataLogic = null;
 
-        #region
+        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
@@ -130,8 +130,19 @@ namespace UserManagement.Forms
             }
 
             var users = dataLogic.GetAllUsers();
+
             var filteredUsers = users.Where(x => x.FirstName.ToLower() == txtFirstName.Text.Trim().ToLower() && x.LastName.ToLower() == txtLastName.Text.Trim().ToLower()).ToList();
-            dgvUsers.DataSource = filteredUsers;
+            if (filteredUsers.Count > 0)
+            {
+                dgvUsers.DataSource = filteredUsers;
+            }
+            else
+            {
+                string firstNameText = txtFirstName.Text == txtFirstName.PlaceHolderValue ? string.Empty : txtFirstName.Text.Trim();
+                string lastNameText = txtLastName.Text == txtLastName.PlaceHolderValue ? string.Empty : txtLastName.Text.Trim();
+
+                MessageBox.Show(string.Format(Messages.NoUsersFoundWithFirstNameLastName, firstNameText, lastNameText), Messages.CaptionInformation);
+            }
         }
 
         /// <summary>

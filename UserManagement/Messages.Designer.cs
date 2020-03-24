@@ -142,6 +142,15 @@ namespace UserManagement {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Some error occured. Please try again after sometime. Error has been reported to Administrator..
+        /// </summary>
+        public static string GenericExceptionMessage {
+            get {
+                return ResourceManager.GetString("GenericExceptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Country.
         /// </summary>
         public static string InvalidCountry {
@@ -174,6 +183,15 @@ namespace UserManagement {
         public static string NoSpecialChactersAndSymbols {
             get {
                 return ResourceManager.GetString("NoSpecialChactersAndSymbols", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No users found in system with following First Name &quot;{0}&quot; and Last Name &quot;{1}&quot;.
+        /// </summary>
+        public static string NoUsersFoundWithFirstNameLastName {
+            get {
+                return ResourceManager.GetString("NoUsersFoundWithFirstNameLastName", resourceCulture);
             }
         }
         
